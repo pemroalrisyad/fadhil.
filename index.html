@@ -1,124 +1,122 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio Fadhil Ataillah Merenda</title>
-  <style>
-    body {
-      background-color: #1a1a1a;
-      color: #e0e0e0;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Fadhil Ataillah Merenda</title>
+    <style>
+        /* Reset some styles for consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header {
-      background: #6a0dad;
-      padding: 25px;
-      text-align: center;
-    }
+        /* Body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #444;
+            line-height: 1.6;
+            padding: 0;
+        }
 
-    h1 {
-      color: #ffffff;
-    }
+        /* Header styling */
+        header {
+            background-color: #6C63FF;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    nav {
-      text-align: center;
-      margin-top: 20px;
-    }
+        header h1 {
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
 
-    nav a {
-      color: #6a0dad;
-      text-decoration: none;
-      margin: 10px 20px;
-      font-size: 1.2em;
-      padding: 10px;
-      border-radius: 5px;
-      background-color: #3a2a8b;
-    }
+        /* Section styling */
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    nav a:hover {
-      background-color: #6a0dad;
-      color: #ffffff;
-    }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
 
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #2b1a78;
-      padding: 30px;
-      border-radius: 10px;
-    }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #6C63FF;
+        }
 
-    p {
-      font-size: 1.2em;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
+        p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
 
-    .content {
-      display: none;
-    }
+        p strong {
+            color: #6C63FF;
+        }
 
-    .content.active {
-      display: block;
-    }
+        /* Footer styling */
+        footer {
+            text-align: center;
+            background-color: #6C63FF;
+            color: white;
+            padding: 20px;
+            font-size: 1.1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    footer {
-      background-color: #6a0dad;
-      color: #e0e0e0;
-      text-align: center;
-      padding: 15px;
-    }
-  </style>
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            footer {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <h1>Portofolio Fadhil Ataillah Merenda</h1>
+    <h1>Portofolio Fadhil Ataillah Merenda</h1>
 </header>
 
-<nav>
-  <a href="javascript:void(0)" onclick="showContent('home')">Beranda</a>
-  <a href="javascript:void(0)" onclick="showContent('hobi')">Hobi</a>
-  <a href="javascript:void(0)" onclick="showContent('sekolah')">Sekolah</a>
-</nav>
-
-<!-- Home Section -->
-<section id="home" class="content active">
-  <h2>Selamat datang!</h2>
-  <p>Nama saya <strong>Fadhil Ataillah Merenda</strong>. Saya sangat menikmati waktu luang saya dengan bermain game. Dari game, saya belajar strategi, kerja tim, dan juga cara berpikir kreatif.</p>
-  <p>Saat ini saya bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>, tempat saya menimba ilmu dan membangun masa depan.</p>
-</section>
-
-<!-- Hobi Section -->
-<section id="hobi" class="content">
-  <h2>Hobi Saya</h2>
-  <p>Salah satu hobi utama saya adalah bermain game. Saya suka game strategi, petualangan, dan game online multiplayer. Bermain game membuat saya belajar kerja tim, berpikir cepat, dan bersenang-senang di waktu luang.</p>
-</section>
-
-<!-- Sekolah Section -->
-<section id="sekolah" class="content">
-  <h2>Sekolah Saya</h2>
-  <p>Saya saat ini bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>. Sekolah ini memiliki lingkungan yang islami, fasilitas yang lengkap, dan guru-guru yang ramah serta berpengalaman. Di sini saya belajar banyak hal baik dalam akademik maupun akhlak.</p>
+<section>
+    <h2>Selamat datang!</h2>
+    <p>Halo! Nama saya <strong>Fadhil Ataillah Merenda</strong>.</p>
+    <p>Saya seorang yang memiliki hobi bermain game. Game bukan hanya sarana hiburan, tetapi juga media yang mengajarkan saya banyak hal, seperti strategi, keterampilan dalam pengambilan keputusan, serta kerja sama tim yang solid.</p>
+    <p>Saat ini, saya bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>. Di sini saya belajar banyak hal, baik dalam aspek akademik maupun dalam pembentukan karakter. Lingkungan sekolah yang mendukung membuat saya merasa semakin berkembang.</p>
 </section>
 
 <footer>
-  &copy; 2025 Fadhil Ataillah Merenda
+    <p>&copy; 2025 Fadhil Ataillah Merenda. All Rights Reserved.</p>
 </footer>
-
-<script>
-  function showContent(id) {
-    // Hide all content sections
-    const contents = document.querySelectorAll('.content');
-    contents.forEach(content => content.classList.remove('active'));
-
-    // Show the selected content
-    const selectedContent = document.getElementById(id);
-    selectedContent.classList.add('active');
-  }
-</script>
 
 </body>
 </html>
