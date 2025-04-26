@@ -25,7 +25,7 @@
         header {
             background-color: #6C63FF;
             color: white;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -34,6 +34,27 @@
             font-size: 2.5em;
             letter-spacing: 1px;
             font-weight: 700;
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: #4CAF50;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            background-color: #6C63FF;
+        }
+
+        nav a:hover {
+            background-color: #444;
         }
 
         /* Section styling */
@@ -87,6 +108,11 @@
                 font-size: 2em;
             }
 
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
             section {
                 padding: 20px;
             }
@@ -107,16 +133,47 @@
     <h1>Portofolio Fadhil Ataillah Merenda</h1>
 </header>
 
-<section>
-    <h2>Selamat datang!</h2>
+<nav>
+    <a href="javascript:void(0)" onclick="showContent('tentang')">Tentang Saya</a>
+    <a href="javascript:void(0)" onclick="showContent('hobi')">Hobi</a>
+    <a href="javascript:void(0)" onclick="showContent('sekolah')">Sekolah</a>
+</nav>
+
+<!-- Tentang Saya Section -->
+<section id="tentang" class="content active">
+    <h2>Tentang Saya</h2>
     <p>Halo! Nama saya <strong>Fadhil Ataillah Merenda</strong>.</p>
     <p>Saya seorang yang memiliki hobi bermain game. Game bukan hanya sarana hiburan, tetapi juga media yang mengajarkan saya banyak hal, seperti strategi, keterampilan dalam pengambilan keputusan, serta kerja sama tim yang solid.</p>
     <p>Saat ini, saya bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>. Di sini saya belajar banyak hal, baik dalam aspek akademik maupun dalam pembentukan karakter. Lingkungan sekolah yang mendukung membuat saya merasa semakin berkembang.</p>
 </section>
 
+<!-- Hobi Section -->
+<section id="hobi" class="content">
+    <h2>Hobi Saya</h2>
+    <p>Salah satu hobi utama saya adalah bermain game. Saya suka game strategi, petualangan, dan game online multiplayer. Bermain game membuat saya belajar kerja tim, berpikir cepat, dan bersenang-senang di waktu luang.</p>
+</section>
+
+<!-- Sekolah Section -->
+<section id="sekolah" class="content">
+    <h2>Sekolah Saya</h2>
+    <p>Saya saat ini bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>. Sekolah ini memiliki lingkungan yang islami, fasilitas yang lengkap, dan guru-guru yang ramah serta berpengalaman. Di sini saya belajar banyak hal baik dalam akademik maupun akhlak.</p>
+</section>
+
 <footer>
     <p>&copy; 2025 Fadhil Ataillah Merenda. All Rights Reserved.</p>
 </footer>
+
+<script>
+    function showContent(id) {
+        // Hide all content sections
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        // Show the selected content
+        const selectedContent = document.getElementById(id);
+        selectedContent.classList.add('active');
+    }
+</script>
 
 </body>
 </html>
