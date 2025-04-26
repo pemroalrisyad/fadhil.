@@ -6,53 +6,67 @@
   <title>Portofolio Fadhil Ataillah Merenda</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0f0f0f;
       color: #00ffcc;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     header {
       background: #1a1a1a;
-      padding: 30px 20px;
+      padding: 25px;
       text-align: center;
       box-shadow: 0 0 15px #00ffcc;
     }
 
-    header h1 {
-      font-size: 2.5em;
+    h1 {
       color: #00ffff;
       text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
     }
 
-    section {
-      flex: 1;
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #1f1f1f;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #00ffcc;
-      margin-top: 40px;
+    nav {
+      text-align: center;
+      margin-top: 20px;
     }
 
-    section h2 {
-      color: #ff00ff;
-      text-shadow: 0 0 10px #ff00ff;
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      margin: 10px 20px;
+      font-size: 1.2em;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #1f1f1f;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    nav a:hover {
+      background-color: #00ffcc;
+      color: #1f1f1f;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffcc;
     }
 
     p {
       font-size: 1.2em;
-      line-height: 1.6;
       color: #e0e0e0;
+      line-height: 1.6;
     }
 
-    strong {
-      color: #00ffff;
+    .content {
+      display: none;
+    }
+
+    .content.active {
+      display: block;
     }
 
     footer {
@@ -62,36 +76,54 @@
       padding: 15px;
       box-shadow: 0 -2px 15px #00ffcc;
     }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
-      }
-      to {
-        text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
-      }
-    }
-
-    header h1, footer {
-      animation: glow 2s infinite alternate;
-    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Fadhil Ataillah Merenda</h1>
+  <h1>Portofolio Fadhil Ataillah Merenda</h1>
 </header>
 
-<section>
-  <h2>Halo dan Selamat Datang!</h2>
+<nav>
+  <a href="javascript:void(0)" onclick="showContent('home')">Beranda</a>
+  <a href="javascript:void(0)" onclick="showContent('hobi')">Hobi</a>
+  <a href="javascript:void(0)" onclick="showContent('sekolah')">Sekolah</a>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="content active">
+  <h2>Selamat datang!</h2>
   <p>Nama saya <strong>Fadhil Ataillah Merenda</strong>. Saya sangat menikmati waktu luang saya dengan bermain game. Dari game, saya belajar strategi, kerja tim, dan juga cara berpikir kreatif.</p>
   <p>Saat ini saya bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>, tempat saya menimba ilmu dan membangun masa depan.</p>
+</section>
+
+<!-- Hobi Section -->
+<section id="hobi" class="content">
+  <h2>Hobi Saya</h2>
+  <p>Salah satu hobi utama saya adalah bermain game. Saya suka game strategi, petualangan, dan game online multiplayer. Bermain game membuat saya belajar kerja tim, berpikir cepat, dan bersenang-senang di waktu luang.</p>
+</section>
+
+<!-- Sekolah Section -->
+<section id="sekolah" class="content">
+  <h2>Sekolah Saya</h2>
+  <p>Saya saat ini bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>. Sekolah ini memiliki lingkungan yang islami, fasilitas yang lengkap, dan guru-guru yang ramah serta berpengalaman. Di sini saya belajar banyak hal baik dalam akademik maupun akhlak.</p>
 </section>
 
 <footer>
   &copy; 2025 Fadhil Ataillah Merenda
 </footer>
+
+<script>
+  function showContent(id) {
+    // Hide all content sections
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    // Show the selected content
+    const selectedContent = document.getElementById(id);
+    selectedContent.classList.add('active');
+  }
+</script>
 
 </body>
 </html>
