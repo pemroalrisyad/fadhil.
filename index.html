@@ -2,119 +2,162 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fadhil Ataillah Merenda</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
       font-family: 'Arial', sans-serif;
     }
 
     body {
       background-color: #000;
       color: #fff;
-      overflow-x: hidden;
     }
 
     header {
+      background-color: #111;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
-      font-size: 1.8em;
+      font-size: 1.5rem;
       font-weight: bold;
-      color: red;
+      color: #e10600;
     }
 
     nav a {
+      color: #fff;
       margin-left: 20px;
       text-decoration: none;
-      color: #fff;
-      font-weight: 500;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: red;
+      color: #e10600;
     }
 
     .hero {
+      background: url('https://www.ferrari.com/images/auto/2023_portfolio/desktop/296-gts.jpg') no-repeat center center/cover;
       height: 90vh;
-      background: url('https://images.unsplash.com/photo-1600359742315-4f427dd57b44?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero .content {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
+      animation: slideUp 2s ease-out;
     }
 
     .hero h1 {
-      font-size: 3.5em;
-      color: red;
-      text-shadow: 2px 2px 10px #000;
+      font-size: 3rem;
+      color: #e10600;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2rem;
     }
 
     .section {
       padding: 60px 40px;
+      animation: fadeIn 1.5s ease;
     }
 
-    .section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: red;
+    .section.dark {
+      background-color: #111;
     }
 
-    .about, .hobbies {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.2em;
-      line-height: 1.6;
+    .section img {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #e10600;
+      transition: transform 0.3s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.05);
     }
 
     footer {
-      background-color: #111;
       text-align: center;
       padding: 20px;
-      font-size: 0.9em;
-      color: #aaa;
+      background-color: #111;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo">Fadhil Merenda</div>
+    <div class="logo">Fadhil A.M.</div>
     <nav>
       <a href="#about">Tentang</a>
-      <a href="#hobbies">Hobi</a>
+      <a href="#hobby">Hobi</a>
+      <a href="#gallery">Galeri</a>
       <a href="#contact">Kontak</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Selamat Datang di Portofolio Saya</h1>
+    <div class="content">
+      <h1>Halo, saya Fadhil</h1>
+      <p>Siswa SMP Al-Irsyad yang bersemangat di dunia karting!</p>
+    </div>
   </section>
 
-  <section class="section" id="about">
+  <section id="about" class="section">
     <h2>Tentang Saya</h2>
-    <div class="about">
-      <p>Halo! Nama saya <strong>Fadhil Ataillah Merenda</strong>. Saya seorang pelajar di <strong>SMP Al-Irsyad</strong>. Saya sangat tertarik dengan dunia otomotif dan memiliki semangat tinggi dalam hal kecepatan dan teknik balap.</p>
-    </div>
+    <p>Nama saya Fadhil Ataillah Merenda. Saya sekolah di SMP Al-Irsyad dan sangat suka tantangan dan kecepatan!</p>
   </section>
 
-  <section class="section" id="hobbies">
+  <section id="hobby" class="section dark">
     <h2>Hobi Saya</h2>
-    <div class="hobbies">
-      <p>Salah satu hobi utama saya adalah <strong>karting</strong>. Saya suka menghabiskan waktu di sirkuit untuk berlatih dan belajar teknik balap yang lebih baik. Karting mengajarkan saya tentang fokus, kecepatan, dan kerja sama tim.</p>
-    </div>
+    <p>Saya suka <strong>karting</strong>, di mana saya bisa merasakan kecepatan seperti pembalap sungguhan!</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Kart_racing.jpg" alt="Karting" />
   </section>
 
-  <footer id="contact">
-    <p>Hubungi saya di: fadhil@example.com</p>
-    <p>&copy; 2025 Fadhil Ataillah Merenda</p>
+  <section id="gallery" class="section">
+    <h2>Galeri Ferrari Favorit</h2>
+    <p>Ferrari menginspirasi saya dalam kecepatan dan desain. Ini beberapa gambar favorit saya:</p>
+    <img src="https://cdn.ferrari.com/cms/network/media/img/resize/63eeaefed0dfd8001d58d68f-ferrari-296gts-gallery-7?width=768&height=512" alt="Ferrari 296 GTS">
+    <img src="https://cdn.ferrari.com/cms/network/media/img/resize/620e03e7668e7c001e3f654c-ferrari-812competizionea-gallery-5?width=768&height=512" alt="Ferrari 812 Competizione A">
+    <img src="https://cdn.ferrari.com/cms/network/media/img/resize/650c7fce1097c5001f46e538-ferrari-roma-spider-gallery-5?width=768&height=512" alt="Ferrari Roma Spider">
+  </section>
+
+  <section id="contact" class="section dark">
+    <h2>Kontak Saya</h2>
+    <p>Email: <a href="mailto:fadhil@example.com" style="color:#e10600;">fadhil@example.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fadhil Ataillah Merenda. Dibuat dengan semangat dan inspirasi dari Ferrari.</p>
   </footer>
+
 </body>
 </html>
