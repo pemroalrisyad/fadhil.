@@ -1,179 +1,161 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Fadhil Ataillah Merenda</title>
-    <style>
-        /* Reset some styles for consistency */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FadhilFlix - Portofolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        /* Body styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f7f7;
-            color: #444;
-            line-height: 1.6;
-            padding: 0;
-        }
+    body {
+      background-color: #141414;
+      color: #fff;
+    }
 
-        /* Header styling */
-        header {
-            background-color: #6C63FF;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    header {
+      background-color: #000;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        header h1 {
-            font-size: 2.5em;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
+    .logo {
+      color: #e50914;
+      font-size: 32px;
+      font-weight: bold;
+    }
 
-        /* Navigation styling */
-        nav {
-            background-color: #4CAF50;
-            padding: 10px 0;
-            text-align: center;
-        }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 15px;
-            font-size: 1.1em;
-            border-radius: 5px;
-            background-color: #6C63FF;
-        }
+    .hero {
+      background-image: url('https://wallpaperaccess.com/full/2703652.png');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      padding: 40px;
+    }
 
-        nav a:hover {
-            background-color: #444;
-        }
+    .hero-text {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+    }
 
-        /* Section styling */
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .hero-text h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #e50914;
+    }
 
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
+    .section {
+      padding: 40px;
+    }
 
-        h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-            color: #6C63FF;
-        }
+    .section h2 {
+      margin-bottom: 20px;
+      color: #e50914;
+    }
 
-        p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 20px;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-        p strong {
-            color: #6C63FF;
-        }
+    .card {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
 
-        /* Footer styling */
-        footer {
-            text-align: center;
-            background-color: #6C63FF;
-            color: white;
-            padding: 20px;
-            font-size: 1.1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
 
-            nav a {
-                font-size: 1em;
-                margin: 0 10px;
-            }
+    .card-content {
+      padding: 15px;
+    }
 
-            section {
-                padding: 20px;
-            }
+    .card-content h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
 
-            p {
-                font-size: 1em;
-            }
-
-            footer {
-                font-size: 1em;
-            }
-        }
-    </style>
+    .footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="logo">FadhilFlix</div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#projek">Projek</a>
+      <a href="#tentang">Tentang</a>
+      <a href="halaman-lain.html">Halaman Lain</a>
+    </nav>
+  </header>
 
-<header>
-    <h1>Portofolio Fadhil Ataillah Merenda</h1>
-</header>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Selamat datang di FadhilFlix</h1>
+      <p>Portofolio bergaya Netflix milik Fadhil Ataillah Merenda, siswa SMP Al-Irsyad Purwokerto dengan hobi rooting Android!</p>
+    </div>
+  </div>
 
-<nav>
-    <a href="javascript:void(0)" onclick="showContent('tentang')">Tentang Saya</a>
-    <a href="javascript:void(0)" onclick="showContent('hobi')">Hobi</a>
-    <a href="javascript:void(0)" onclick="showContent('sekolah')">Sekolah</a>
-</nav>
+  <section class="section" id="projek">
+    <h2>Projek Unggulan</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1612036781441-c6dfe5b2ad68?fit=crop&w=800&q=80" alt="Rooting">
+        <div class="card-content">
+          <h3>Rooting Android</h3>
+          <p>Pengalaman melakukan rooting dan modifikasi sistem Android menggunakan Magisk, TWRP, dan lainnya.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?fit=crop&w=800&q=80" alt="Modding">
+        <div class="card-content">
+          <h3>Custom ROM & Modding</h3>
+          <p>Eksperimen dengan custom ROM, debloat, dan tweaking untuk performa maksimal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Tentang Saya Section -->
-<section id="tentang" class="content active">
+  <section class="section" id="tentang">
     <h2>Tentang Saya</h2>
-    <p>Halo! Nama saya <strong>Fadhil Ataillah Merenda</strong>.</p>
-    <p>Saya seorang yang memiliki hobi bermain game. Game bukan hanya sarana hiburan, tetapi juga media yang mengajarkan saya banyak hal, seperti strategi, keterampilan dalam pengambilan keputusan, serta kerja sama tim yang solid.</p>
-    <p>Saat ini, saya bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>. Di sini saya belajar banyak hal, baik dalam aspek akademik maupun dalam pembentukan karakter. Lingkungan sekolah yang mendukung membuat saya merasa semakin berkembang.</p>
-</section>
+    <p>Nama saya <strong>Fadhil Ataillah Merenda</strong>, siswa di <strong>SMP Al-Irsyad Purwokerto</strong>. Saya tertarik pada dunia teknologi, khususnya eksplorasi sistem operasi Android melalui teknik rooting dan modifikasi perangkat lunak. Saya ingin terus belajar dan suatu hari menjadi developer profesional.</p>
+  </section>
 
-<!-- Hobi Section -->
-<section id="hobi" class="content">
-    <h2>Hobi Saya</h2>
-    <p>Salah satu hobi utama saya adalah bermain game. Saya suka game strategi, petualangan, dan game online multiplayer. Bermain game membuat saya belajar kerja tim, berpikir cepat, dan bersenang-senang di waktu luang.</p>
-</section>
-
-<!-- Sekolah Section -->
-<section id="sekolah" class="content">
-    <h2>Sekolah Saya</h2>
-    <p>Saya saat ini bersekolah di <strong>SMP Al Irsyad Purwokerto</strong>. Sekolah ini memiliki lingkungan yang islami, fasilitas yang lengkap, dan guru-guru yang ramah serta berpengalaman. Di sini saya belajar banyak hal baik dalam akademik maupun akhlak.</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Fadhil Ataillah Merenda. All Rights Reserved.</p>
-</footer>
-
-<script>
-    function showContent(id) {
-        // Hide all content sections
-        const contents = document.querySelectorAll('.content');
-        contents.forEach(content => content.classList.remove('active'));
-
-        // Show the selected content
-        const selectedContent = document.getElementById(id);
-        selectedContent.classList.add('active');
-    }
-</script>
-
+  <div class="footer">
+    &copy; 2025 FadhilFlix. Dibuat dengan semangat dan kopi.
+  </div>
 </body>
 </html>
